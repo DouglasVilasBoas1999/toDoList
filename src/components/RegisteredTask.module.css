@@ -1,0 +1,47 @@
+.RegisteredTask{
+    align-items: center;    
+    margin: 4.0625rem auto 0;
+    width: 46rem;
+    /* border: 1px solid var(--purple) ; */
+}
+.RegisteredTask header {
+    display: flex;   
+    width: 100%;
+    justify-content: space-between;  
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.qtdeBottom{
+    background: var(--gray-400);
+    color: var(--gray-200);
+    border-radius: 10px;
+    padding: 2px 8px ;
+    margin: 0 8px;
+
+
+}
+
+.TaskCreates   {
+  color: var(--blue);
+      font-weight: bold;
+
+}
+.TaskCompleted {
+    color: var(--purple);
+}
+
+.TaskEmpty {
+    color: var(--gray-300);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;      
+    justify-content: center;  
+    gap: 8px;                
+    text-align: center;    
+    margin-top: 4rem ;
+}
+    
+
+

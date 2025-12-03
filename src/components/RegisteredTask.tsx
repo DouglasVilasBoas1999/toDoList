@@ -7,20 +7,19 @@ export function RegisteredTask(){
         <article className={styles.RegisteredTask}> 
         <header > 
             <div className={styles.TaskCreates}>
-                <text> Tarefas criadas <span className={styles.qtdeBottom}> 0 de 10  </span> </text>
+                <p> Tarefas criadas <span className={styles.qtdeBottom}> 0  </span> </p>
             </div>
             <div className={styles.TaskCompleted}>
-                <text> Concluídas  <span className={styles.qtdeBottom}> 0 </span> </text>
+                <p> Concluídas  <span className={styles.qtdeBottom}> 0 de 10  </span> </p>
             </div>
         </header>
-            
+        <hr/>
             <div className={styles.TaskEmpty}>
                 <ClipboardText size={56}  weight="thin"/>
                 <strong>Você ainda não tem tarefas cadastradas </strong>
-                <text>Você ainda não tem tarefas cadastradas </text>
+                <p>Você ainda não tem tarefas cadastradas </p>
             </div>
       
-
         </article>
 
 )

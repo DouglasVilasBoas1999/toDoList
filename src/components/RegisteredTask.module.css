@@ -10,6 +10,7 @@
     justify-content: space-between;  
     font-size: 14px;
     font-weight: bold;
+    
 
 }
 .qtdeBottom{
@@ -22,9 +23,10 @@
 
 }
 
-.TaskCreates   {
+.TaskCreates{
   color: var(--blue);
-      font-weight: bold;
+  font-weight: bold;
+
 
 }
 .TaskCompleted {
@@ -41,7 +43,14 @@
     gap: 8px;                
     text-align: center;    
     margin-top: 4rem ;
+
 }
-    
+hr {
+    margin-top:0.625rem ;
+    width: 100%;
+    background: red;
+    height: 1px; 
+    border: none;
+    border-radius: 12px 12px 0 0;
 
-
+}

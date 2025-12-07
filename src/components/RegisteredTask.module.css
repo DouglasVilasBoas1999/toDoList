@@ -1,10 +1,9 @@
-.RegisteredTask{
+.registeredTask{
     align-items: center;    
     margin: 4.0625rem auto 0;
     width: 46rem;
-    /* border: 1px solid var(--purple) ; */
 }
-.RegisteredTask header {
+.registeredTask header {
     display: flex;   
     width: 100%;
     justify-content: space-between;  
@@ -20,20 +19,35 @@
     padding: 2px 8px ;
     margin: 0 8px;
 
-
 }
 
-.TaskCreates{
+
+.taskCreates{
   color: var(--blue);
   font-weight: bold;
 
 
 }
-.TaskCompleted {
+.taskCompleted {
     color: var(--purple);
 }
 
-.TaskEmpty {
+
+.lineDivisor{
+  background: transparent;        
+  border-top: 1px solid var(--gray-300);       /* ← cor da linha */
+  width: 100%;
+  height: 0.5rem;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.taskEmpty {
+  margin-top: 0.625rem;
+
+}
+.emptyContent {
+    margin-top: 4rem;
     color: var(--gray-300);
     font-size: 16px;
     display: flex;
@@ -42,15 +56,50 @@
     justify-content: center;  
     gap: 8px;                
     text-align: center;    
-    margin-top: 4rem ;
+    border-radius: 8px;
+    width: 100%;
+}
+.taskContent {
+    background: var(--gray-500);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--gray-100);
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 1.5rem ;
 
 }
-hr {
-    margin-top:0.625rem ;
-    width: 100%;
-    background: red;
-    height: 1px; 
-    border: none;
-    border-radius: 12px 12px 0 0;
+
+.taskContent button{
+    border:none;
+    cursor:pointer;
+    line-height: 0;
+    border-radius: 2px;   
+    background: transparent;
+ 
+}
+.statusTask {
+    color: var(--blue);
+
+}
+.completedTask {
+    color: var(--gray-100);
+    background-color: var(--purple-dark) !important;
+    border-radius:50% !important; 
+    padding: 4px;
+
+}
+
+.deleteTask {
+    color: var(--gray-300);
+}
+
+.deleteTask:hover{
+    color: var(--red)
+}
+
+.taskContent p {
+    padding: 0 2rem ;
 
 }

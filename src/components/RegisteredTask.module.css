@@ -26,7 +26,6 @@
   color: var(--blue);
   font-weight: bold;
 
-
 }
 .taskCompleted {
     color: var(--purple);
@@ -35,7 +34,7 @@
 
 .lineDivisor{
   background: transparent;        
-  border-top: 1px solid var(--gray-300);       /* ← cor da linha */
+  border-top: 1px solid var(--gray-300);     
   width: 100%;
   height: 0.5rem;
   border-top-left-radius: 100px;

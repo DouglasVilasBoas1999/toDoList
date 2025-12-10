@@ -1,27 +1,46 @@
 import styles from  './CreateTask.module.css'
 import { PlusCircle } from 'phosphor-react'
-import {  } from 'react'
+import { useState, type FormEvent } from 'react'
 
+export interface TaskProps {
+    task: string;
+}   
+
+export function CreateTask({task}: TaskProps){
+   const [tasks, setTasks] = useState(['Teste'])
+   const [newTaskText, setNewTaskText] =  useState('')
    
-export function CreateTask(){
-   
-    function autoResize(e) {
-    e.target.style.height = "auto";             // reseta
-    e.target.style.height = e.target.scrollHeight + "px";  // ajusta ao conteúdo
-}
-   
-   
+    function autoResize(e: React.FormEvent<HTMLTextAreaElement>) {
+        const el = e.currentTarget;
+        el.style.height = "auto";
+        if (el.value.trim() === "") {
+            el.style.height = "3.375rem"; 
+            return;
+        }
+        el.style.height = `${el.scrollHeight}px`;
+    }
+    
+    function handleCreateNewTask(event:FormEvent<HTMLFormElement>){
+        event.preventDefault()
+        const formData = new FormData(event.currentTarget);
+        const newTaskText = formData.get('task') as string;
+        setTasks([...tasks, newTaskText]);
+        setNewTaskText('');
+    }
+
+
     return(
-        <form className={styles.task}>
+        <form onSubmit={handleCreateNewTask} className={styles.task}>
             <textarea
-              onInput={autoResize}
+                name= 'task'
                 placeholder='Adicione uma nova tarefa'
-                
+                onInput={autoResize}
+                value= {newTaskText}
             />
-            <a href='#'>   
+            <button type='submit'>   
             Criar                 
             < PlusCircle size={20}/>
-            </a>
+            </button>
         </form> 
     )
 }

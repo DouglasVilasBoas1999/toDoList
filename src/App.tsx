@@ -1,5 +1,4 @@
 import './global.css'
-import styles from './App.module.css'
 import { Header } from './components/Header'
 import { CreateTask } from './components/CreateTask'
 import { RegisteredTask } from './components/RegisteredTask'

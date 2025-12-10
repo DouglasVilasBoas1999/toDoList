@@ -9,7 +9,7 @@ export function RegisteredTask(){
             <div className={styles.taskCreates}>
                 <p> Tarefas criadas <span className={styles.qtdeBottom}> 0  </span> </p>
             </div>
-            <div className={styles.TaskCompleted}>
+            <div className={styles.taskCompleted}>
                 <p> Concluídas  <span className={styles.qtdeBottom}> 0 de 10  </span> </p>
             </div>
         </header>

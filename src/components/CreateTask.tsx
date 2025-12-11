@@ -1,6 +1,6 @@
 import styles from  './CreateTask.module.css'
 import { PlusCircle } from 'phosphor-react'
-import { useState, type FormEvent } from 'react'
+import { useState, type FormEvent, type ChangeEvent, type InvalidEvent } from 'react'
 
 export interface TaskProps {
     task: string;
@@ -20,12 +20,24 @@ export function CreateTask({task}: TaskProps){
         el.style.height = `${el.scrollHeight}px`;
     }
     
-    function handleCreateNewTask(event:FormEvent<HTMLFormElement>){
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget);
-        const newTaskText = formData.get('task') as string;
-        setTasks([...tasks, newTaskText]);
-        setNewTaskText('');
+     function handleCreateNewTask(event:FormEvent<HTMLFormElement>){
+            event.preventDefault()
+            const formData = new FormData(event.currentTarget);
+            const newCommentText = formData.get('comment') as string;
+            setTasks([...tasks, newCommentText]);
+            setNewTaskText('');
+        }
+
+
+
+    function handleNewTaskInvalid(event: InvalidEvent<HTMLTextAreaElement>){
+            
+            event.target.setCustomValidity('Esse campo é obrigátorio')
+        }
+    
+    function handleNewTaskChange(event:FormEvent<HTMLFormElement>){
+        event.target.setCustomValidity('')
+        setNewTaskText(event.target.value)
     }
 
 
@@ -36,6 +48,9 @@ export function CreateTask({task}: TaskProps){
                 placeholder='Adicione uma nova tarefa'
                 onInput={autoResize}
                 value= {newTaskText}
+                onChange={handleNewTaskChange}
+                onInvalid={handleNewTaskInvalid}
+                required
             />
             <button type='submit'>   
             Criar                 

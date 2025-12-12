@@ -1,104 +1,82 @@
-.registeredTask{
-    align-items: center;    
-    margin: 4.0625rem auto 0;
-    width: 46rem;
-}
-.registeredTask header {
-    display: flex;   
-    width: 100%;
-    justify-content: space-between;  
-    font-size: 14px;
-    font-weight: bold;
-    
-
-}
-.qtdeBottom{
-    background: var(--gray-400);
-    color: var(--gray-200);
-    border-radius: 10px;
-    padding: 2px 8px ;
-    margin: 0 8px;
-
+/* container principal */
+.registeredTask {
+  width: 46rem;
+  margin: 1rem auto 0;
+  align-items: center;
 }
 
-
-.taskCreates{
-  color: var(--blue);
-  font-weight: bold;
-
-}
-.taskCompleted {
-    color: var(--purple);
-}
-
-
-.lineDivisor{
-  background: transparent;        
-  border-top: 1px solid var(--gray-300);     
+/* linha divisória */
+.lineDivisor {
+  background: transparent;
+  border-top: 1px solid var(--gray-300);
   width: 100%;
   height: 0.5rem;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
 }
 
+/* estado vazio */
 .taskEmpty {
   margin-top: 0.625rem;
-
 }
+
 .emptyContent {
-    margin-top: 4rem;
-    color: var(--gray-300);
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;  
-    align-items: center;      
-    justify-content: center;  
-    gap: 8px;                
-    text-align: center;    
-    border-radius: 8px;
-    width: 100%;
+  margin-top: 4rem;
+  color: var(--gray-300);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
 }
+
+/* item de tarefa */
 .taskContent {
-    background: var(--gray-500);
-    border-radius: 8px;
-    padding: 1rem;
-    color: var(--gray-100);
-    display:flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 1.5rem ;
-
+  background: var(--gray-500);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--gray-100);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
-.taskContent button{
-    border:none;
-    cursor:pointer;
-    line-height: 0;
-    border-radius: 2px;   
-    background: transparent;
- 
+.taskContent button {
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+  background: transparent;
 }
+
 .statusTask {
-    color: var(--blue);
-
+  color: var(--blue);
 }
-.completedTask {
-    color: var(--gray-100);
-    background-color: var(--purple-dark) !important;
-    border-radius:50% !important; 
-    padding: 4px;
 
+.completedTask {
+  color: var(--gray-100);
+  background-color: var(--purple-dark) !important;
+  border-radius: 50% !important;
+  padding: 4px;
 }
 
 .deleteTask {
-    color: var(--gray-300);
+  color: var(--gray-300);
 }
 
-.deleteTask:hover{
-    color: var(--red)
+.deleteTask:hover {
+  color: var(--red);
 }
 
 .taskContent p {
-    padding: 0 2rem ;
-
+  padding: 0 2rem;
 }
+.taskContent + .taskContent {
+  margin-top: 0.75rem;
+}
+

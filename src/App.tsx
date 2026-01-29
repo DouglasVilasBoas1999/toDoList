@@ -5,7 +5,7 @@ import { RegisteredTask } from './components/RegisteredTask'
 
 function App() {
 
-  return (
+  return ( 
     <div>
       < Header />
       < CreateTask />
